@@ -41,6 +41,7 @@ class Api(APIView):
 
 
     def post(self, request, format=None):
+        csmacd.restart_simulation()
         body_unicode = request.body.decode('utf-8')
         body = json.loads(body_unicode)
         info = body['datas']

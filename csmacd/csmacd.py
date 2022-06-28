@@ -114,6 +114,16 @@ class CSMACD():
         self.successfully_transmitted_packets = 0
         self.nodes = []
 
+    def restart_simulation(self):
+        self.actual_window_time = 0
+        self.curr_time = 0
+        self.window_time_collisions = 0
+        self.wt_successfully_transmitted_packets = 0
+        self.collisions = 0
+        self.transmitted_packets = 0
+        self.successfully_transmitted_packets = 0
+        self.nodes = []
+
     def get_window_time_host(self, window_time):
         data = ""
         for i in range(len(self.nodes)):
